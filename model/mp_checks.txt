@@ -1,0 +1,39 @@
+=== rule shape (logistic), Z=50 ===
+beta= 0.5 y0=0.10: 0.11  0.13  0.16  0.19
+beta= 0.5 y0=0.25: 0.11  0.11  0.12  0.16
+beta= 0.5 y0=0.50: 0.11  0.11  0.11  0.16
+beta= 0.5 y0=0.75: 0.11  0.11  0.14  0.22
+beta= 0.5 y0=0.90: 0.11  0.16  0.25  0.32
+beta=10.0 y0=0.10: 0.11  0.13  0.16  0.18
+beta=10.0 y0=0.25: 0.11  0.11  0.12  0.16
+beta=10.0 y0=0.50: 0.11  0.11  0.11  0.15
+beta=10.0 y0=0.75: 0.11  0.11  0.15  0.26
+beta=10.0 y0=0.90: 0.11  0.18  0.30  0.39
+=== reward size r = k u, step rule y0=1/2, Z=50 ===
+k=0.40: beta=0.5 0.23  beta=10 0.22
+k=0.60: beta=0.5 0.14  beta=10 0.14
+k=0.70: beta=0.5 0.12  beta=10 0.11
+k=0.80: beta=0.5 0.11  beta=10 0.11
+k=1.00: beta=0.5 0.11  beta=10 0.11
+k=1.25: beta=0.5 0.11  beta=10 0.11
+k=1.50: beta=0.5 0.11  beta=10 0.11
+=== retained fines kappa, punishment, Z=50 ===
+kappa=0.00: beta=0.5 0.31  beta=10 0.30
+kappa=0.10: beta=0.5 0.27  beta=10 0.27
+kappa=0.25: beta=0.5 0.21  beta=10 0.21
+kappa=0.50: beta=0.5 0.11  beta=10 0.11
+kappa=1.00: beta=0.5 0.01  beta=10 0.08
+=== unequal population sizes (Z_U, Z_C, Z_S) ===
+(50, 50, 50): beta=0.5 punish 0.31 rule 0.11 | beta=10 punish 0.30 rule 0.11
+(1000, 50, 50): beta=0.5 punish 0.31 rule 0.11 | beta=10 punish 0.31 rule 0.11
+(1000, 10, 20): beta=0.5 punish 0.39 rule 0.13 | beta=10 punish 0.39 rule 0.11
+(1000, 100, 10): beta=0.5 punish 0.33 rule 0.16 | beta=10 punish 0.31 rule 0.11
+(200, 5, 5): beta=0.5 punish 0.55 rule 0.40 | beta=10 punish 0.31 rule 0.11
+(10, 100, 100): beta=0.5 punish 0.47 rule 0.11 | beta=10 punish 0.46 rule 0.11
+=== figM curves ===
+beta=0.5 punish: lift off 0.31
+beta=0.5 reward: lift off 0.80
+beta=0.5 step: lift off 0.11
+beta=10.0 punish: lift off 0.30
+beta=10.0 reward: lift off 0.88
+beta=10.0 step: lift off 0.11

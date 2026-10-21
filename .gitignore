@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.log
+model/*.png
+!model/fig6_calibration_data.png
+!model/figS_calib_mc.png
+validation/*.png
+validation/*.npy

@@ -1,0 +1,52 @@
+=== R1a: general vs geometric fixation, step rule y0=1/2 ===
+  Z=  25 beta=  0.1: max|diff| = 4.0e-14
+  Z=  50 beta=  0.5: max|diff| = 1.5e-13
+  Z=  50 beta= 10.0: max|diff| = 0.0e+00
+  Z= 200 beta=  2.0: max|diff| = 4.1e-14
+  Z= 500 beta= 10.0: max|diff| = 0.0e+00
+  reason: with r_m=u_m, r_h=u_h the concessionaire payoff difference does not depend on w
+
+=== R1b: logistic rule w=1/(1+exp(-(y-y0)/s)), general formula, Z=50 beta=0.5 ===
+  punish 0.31  reward 0.80  step(y0=0.5) 0.11
+  y0=0.10: s=0.01:0.11  s=0.05:0.13  s=0.1:0.16  s=0.2:0.19
+  y0=0.25: s=0.01:0.11  s=0.05:0.11  s=0.1:0.12  s=0.2:0.16
+  y0=0.50: s=0.01:0.11  s=0.05:0.11  s=0.1:0.11  s=0.2:0.16
+  y0=0.75: s=0.01:0.11  s=0.05:0.11  s=0.1:0.14  s=0.2:0.22
+  y0=0.90: s=0.01:0.11  s=0.05:0.16  s=0.1:0.25  s=0.2:0.32
+  same grid, beta=10 (strong selection):
+  y0=0.10: s=0.01:0.11  s=0.05:0.13  s=0.1:0.18  s=0.2:0.22
+  y0=0.25: s=0.01:0.11  s=0.05:0.11  s=0.1:0.12  s=0.2:0.16
+  y0=0.50: s=0.01:0.11  s=0.05:0.11  s=0.1:0.11  s=0.2:0.15
+  y0=0.75: s=0.01:0.11  s=0.05:0.11  s=0.1:0.15  s=0.2:0.26
+  y0=0.90: s=0.01:0.11  s=0.05:0.18  s=0.1:0.30  s=0.2:0.39
+
+=== R1c: reward r_m+r_h = k*(u_m+u_h); condition r_m+r_h > c_P+g_m+g_h = 1.1 <=> k > 0.6875 ===
+  k=0.40 (r_m+r_h=0.64): lift-off Z=50 beta=0.5 -> 0.23; beta=10 -> 0.16
+  k=0.60 (r_m+r_h=0.96): lift-off Z=50 beta=0.5 -> 0.14; beta=10 -> 0.14
+  k=0.70 (r_m+r_h=1.12): lift-off Z=50 beta=0.5 -> 0.12; beta=10 -> 0.11
+  k=0.80 (r_m+r_h=1.28): lift-off Z=50 beta=0.5 -> 0.11; beta=10 -> 0.11
+  k=1.00 (r_m+r_h=1.60): lift-off Z=50 beta=0.5 -> 0.11; beta=10 -> 0.11
+  k=1.25 (r_m+r_h=2.00): lift-off Z=50 beta=0.5 -> 0.11; beta=10 -> 0.11
+  k=1.50 (r_m+r_h=2.40): lift-off Z=50 beta=0.5 -> 0.11; beta=10 -> 0.11
+
+=== R1d: deterministic basin of (1,1,1): share of 8^3 interior starts reaching it ===
+  closed-form adaptive gradients vs four-cell sums: max deviation 3.9e-16
+  punish  : 0.00:0.00 0.05:0.00 0.10:0.00 0.15:0.12 0.20:0.18 0.25:0.24 0.30:0.30 0.35:0.36 0.40:0.44 0.45:0.51 0.50:0.62 0.55:1.00 0.60:1.00 0.65:1.00 0.70:1.00 0.75:1.00 0.80:1.00 0.85:1.00 0.90:1.00 0.95:1.00 1.00:0.98
+  adaptive: 0.00:0.00 0.05:0.00 0.10:0.00 0.15:0.59 0.20:0.70 0.25:0.79 0.30:0.88 0.35:0.94 0.40:0.99 0.45:1.00 0.50:1.00 0.55:1.00 0.60:1.00 0.65:1.00 0.70:1.00 0.75:1.00 0.80:1.00 0.85:1.00 0.90:1.00 0.95:1.00 1.00:0.98
+  adaptive, k=0.6 (reward too small): 0.00:0.00 0.05:0.00 0.10:0.00 0.15:0.10 0.20:0.14 0.25:0.18 0.30:0.21 0.35:0.23 0.40:0.25 0.45:0.27 0.50:0.28 0.55:0.29 0.60:0.31 0.65:0.32 0.70:0.33 0.75:0.34 0.80:0.35 0.85:0.35 0.90:0.36 0.95:0.36 1.00:0.37
+
+=== R2a: State keeps a share kappa of fines (row 3 + kappa(u_m+u_h), row 7 + kappa u_m) ===
+  kappa=0.00: phi** = +0.500; lift-off beta=0.5 0.31, beta=10 0.47
+  kappa=0.10: phi** = +0.420; lift-off beta=0.5 0.27, beta=10 0.39
+  kappa=0.25: phi** = +0.300; lift-off beta=0.5 0.21, beta=10 0.15
+  kappa=0.50: phi** = +0.100; lift-off beta=0.5 0.11, beta=10 0.11
+  kappa=1.00: phi** = -0.300; lift-off beta=0.5 0.01, beta=10 0.08
+  gap closes when kappa(u_m+u_h) >= v+lambda, i.e. kappa >= 0.5 at canonical values
+
+=== R6: unequal population sizes (punish vs adaptive step), beta=0.5 and beta=10 ===
+  (Z_U,Z_C,Z_S)=(50, 50, 50): beta=0.5 punish 0.31 adaptive 0.11 | beta=10 punish 0.47 adaptive 0.11
+  (Z_U,Z_C,Z_S)=(1000, 50, 50): beta=0.5 punish 0.31 adaptive 0.11 | beta=10 punish 0.47 adaptive 0.11
+  (Z_U,Z_C,Z_S)=(1000, 10, 20): beta=0.5 punish 0.39 adaptive 0.13 | beta=10 punish 0.42 adaptive 0.11
+  (Z_U,Z_C,Z_S)=(1000, 100, 10): beta=0.5 punish 0.33 adaptive 0.16 | beta=10 punish 0.28 adaptive 0.11
+  (Z_U,Z_C,Z_S)=(200, 5, 5): beta=0.5 punish 0.55 adaptive 0.40 | beta=10 punish 0.31 adaptive 0.11
+  (Z_U,Z_C,Z_S)=(10, 100, 100): beta=0.5 punish 0.47 adaptive 0.11 | beta=10 punish 0.49 adaptive 0.11

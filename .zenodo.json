@@ -1,0 +1,32 @@
+{
+  "upload_type": "software",
+  "title": "When Punishment Is Not Enough: Incentive Design for Compliance in Highway Public-Private Partnerships (code and data)",
+  "creators": [
+    {
+      "name": "Nguyen, Toan Thang",
+      "affiliation": "Hanoi University of Science and Technology; VinUniversity"
+    },
+    {
+      "name": "Han, The Anh",
+      "affiliation": "Teesside University"
+    },
+    {
+      "name": "Perc, Matjaž",
+      "affiliation": "University of Maribor"
+    },
+    {
+      "name": "Nguyen Ngoc, Doanh",
+      "affiliation": "VinUniversity"
+    }
+  ],
+  "description": "Code and data for the paper \"When Punishment Is Not Enough: Incentive Design for Compliance in Highway Public-Private Partnerships\" by Toan Thang Nguyen, The Anh Han, Matjaž Perc and Doanh Nguyen Ngoc. The archive contains the three-population evolutionary game model, every computation and check behind the numbers in the paper and its Supporting Information, the scripts that draw all figures, the 2024 calibration data for the Hanoi–Hai Phong expressway case study, the table of seven Vietnamese BOT episodes, and the list of all data sources with links and checksums. A fresh run reproduces every cached result and every figure of the paper. See README.md for instructions.",
+  "license": "MIT",
+  "keywords": [
+    "evolutionary game theory",
+    "public-private partnership",
+    "BOT concession",
+    "inspection game",
+    "reward and punishment",
+    "finite populations"
+  ]
+}
